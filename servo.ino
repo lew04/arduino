@@ -1,16 +1,17 @@
 #include <Servo.h>
 Servo myServo;
-int pos=0;
+int servoPin=9;
 void setup() {
-  myServo.attach(9);
+  myServo.attach(servoPin);
 }
 
 void loop() {
-  for(pos=0;pos<=180;pos+=1){
-myServo.write(pos);
-delay(15); }
-for(pos=180;pos>=0;pos-+1) {
+myServo.write(0);
+delay(1000);
+
+myServo.write(90);
+delay(1000);
+
 myServo.write(180);
 delay(1000);
-}
 }
